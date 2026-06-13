@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Part of Momo Framework.
+ *
+ * © Momo Framework
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * Unauthorized copying, modification, or distribution of this file,
+ * via any medium, is strictly prohibited without prior written permission
+ * from the copyright holder.
+ *
+ * @author    Vahe Sargsyan <w33bvGL>
+ * @copyright Momo Framework
+ * @license   AGPL-3.0-or-later <https://www.gnu.org/licenses/agpl-3.0.html>
+ * @link      https://github.com/momo-framework
+ */
+
+declare(strict_types=1);
+
+namespace Momo\Notifications\Messages;
+
+/**
+ * Immutable e-mail payload produced by a notification's `toMail()`.
+ */
+final readonly class MailMessage
+{
+    /**
+     * @param non-empty-string      $subject
+     * @param non-empty-string|null $fromAddress
+     * @param non-empty-string|null $locale rendering locale, or null for the app default
+     */
+    public function __construct(
+        public string $subject,
+        public string $body,
+        public ?string $fromAddress = null,
+        public ?string $locale = null,
+    ) {
+    }
+}

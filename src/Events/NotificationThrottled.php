@@ -28,7 +28,7 @@ use Momo\Events\DomainEvent;
  * Emitted when a notification was suppressed on a channel because the
  * recipient's throttle quota was exhausted.
  */
-final class NotificationThrottled extends DomainEvent
+final readonly class NotificationThrottled extends DomainEvent
 {
     /**
      * @param non-empty-string                                              $channel

@@ -27,7 +27,7 @@ use Momo\Events\DomainEvent;
 /**
  * Emitted after a notification was successfully handed to a channel.
  */
-final class NotificationSent extends DomainEvent
+final readonly class NotificationSent extends DomainEvent
 {
     /**
      * @param non-empty-string                                              $channel

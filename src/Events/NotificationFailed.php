@@ -28,7 +28,7 @@ use Throwable;
 /**
  * Emitted when a channel raised an error while delivering a notification.
  */
-final class NotificationFailed extends DomainEvent
+final readonly class NotificationFailed extends DomainEvent
 {
     /**
      * @param non-empty-string                                              $channel
